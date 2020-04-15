@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="aboutCss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+  <script>
+  var open = document.getElementById('hamburger');
+var changeIcon = true;
+
+open.addEventListener("click", function(){
+
+    var overlay = document.querySelector('.overlay');
+    var nav = document.querySelector('nav');
+    var icon = document.querySelector('.menu-toggle i');
+
+    overlay.classList.toggle("menu-open");
+    nav.classList.toggle("menu-open");
+
+    if (changeIcon) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+
+        changeIcon = false;
+    }
+    else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        changeIcon = true;
+    }
+});
+  </script>
+</head>
+<body>
+  
+    <div class="menu-toggle" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <nav>
+            <h1 class="brand"><a href="index.html">The Cof<span>fe</span>e</a></h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html"> Our Menu</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Where</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+
+
+<div class="w3-container w3-padding-64 " id="about" >
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+      <p>The Coffee shop was found by Stan Smith. When you say coffee, I say 
+          when? The Coffee has the taste of a good, well-rounded, 
+          single origin coffee that will please most coffee aficionados 
+          - great for everyday consumption.,
+           it’s time to sit back with some shrubbery and enjoy some ‘Crispy songs’. </p>
+     
+      <img src="img3.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+      <h1><b>Opening Hours</b></h1>
+      
+      <div class="w3-row">
+        <div class="w3-col s6">
+          <p>Mon to Fri : 07:30am - 12:30pm </p>
+          <p>Saturday : 08:00am - 11:30am </p>
+          <p>Sunday : Cloased</p>
+        </div>
+        <div class="w3-col s6">
+          <p>Rainny Day : 07:30am - 15:00pm</p>
+          <p>Winter Time : 07:30am - 17:00pm</p>
+         
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+</body>
+</html>
